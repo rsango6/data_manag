@@ -1,4 +1,4 @@
-(input_seqames,) = glob_wildcards("Data/{filename}.faa") 
+(input_seqnames,) = glob_wildcards("Data/{filename}.faa") 
 
 rule all:
     input: expand("intermediate/{name}.mafft_aligned.faa", name = input_seqnames)
