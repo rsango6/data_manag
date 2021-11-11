@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 1 of /home/user/sango/bioinf_manag/data_manag/snakemake_tree/Snakefile:
+Missing input files for rule mafft:
+data/DsrA.faa
