@@ -1,4 +1,12 @@
+(input_seqames,) = glob_wildcards("data/{filename.faa") 
+
+rule all:
+    input:
+	 expand("intermediate/{name}.mafft_aligned.faa", name = input_seqnames)
+
+
+
 rule mafft:
-    input: "Data/DsrA.faa"
-    output: "intermediate/DsrA.mafft_aligned.faa"
-    shell: "mafft {input} > {output}" 
+    input: "Data/{seqname}.faa"
+    output:"intermediate/{seqname}.mafft_aligned.faa"
+    shell:"module load mafft && mafft {input} > {output}" 
